@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#444444"
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <title>E-Commerce</title>
+</head>
+<body>
+  <header class="bg-orange-800 flex items-center justify-center h-24 sticky top-0 w-full">
+    <div class="container flex items-center justify-between py-4 px-8 lg:px-20">
+      <div class="logo">
+        <a href="/">
+          <h2 class="font-extrabold text-3xl text-gray-200">SPORTS</h2>
+        </a>
+      </div>
+
+      <div class="flex items-center justify-between gap-8">
+        <div class="flex items-center justify-between gap-8">
+        <div class="cart relative">
+          <a
+          class="text-2xl text-gray-200"
+          href="./cart.html"
+          >
+            <i class="bi bi-cart"></i>
+          </a>
+          <span id="count-items" class="bg-red-500 rounded-full w-6 h-6 absolute -top-3 left-0 flex items-center justify-center -z-10">0</span>
+        </div>
+
+
+        <div class="logout">
+          <a
+          class="text-gray-200 text-2xl"
+          href="./logout.html"
+          >
+            <i class="bi bi-box-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="min-h-[calc(100dvh-13rem)] flex items-center justify-center">
+    <div class="container flex flex-col lg:flex-row min-h-[calc(100dvh-13rem)]">
+      
+      <div class="lg:flex-[3] p-6">
+        <div>
+          <h2 class="text-center text-4xl font-bold pb-6">Cart Items</h2>
+        </div>
+
+        <div id="cart-items" class="cart-items flex flex-col gap-2">
+
+        </div>
+      </div>
+
+
+      <div class="lg:flex-1 bg-gray-300 rounded-xl lg:h-[60dvh] p-3">
+        <div class="h-full py-8 flex flex-col justify-between">
+
+          <h3 class="text-center font-bold text-4xl">Cart Total</h3>
+
+
+          <div class="order-details flex flex-col gap-8">
+            <div class="total">
+              <p class="text-3xl font-bold">total:
+                <span id="total" class="text-xl"></span>
+              </p>
+            </div>
+
+            <div class="shipping">
+              <p class="text-3xl font-bold">Shipping:
+                <span id="shipping">Free</span>
+              </p>
+            </div>
+
+            <div class="order-total border-t-2 border-gray-400 pt-2">
+              <p class="text-3xl font-bold">Total price:
+                <span id="order-price" class="text-xl"></span>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="checkout">
+            <button id="checkout-button" class="checkout-button w-full p-4 text-2xl font-bold text-white bg-orange-500 rounded">Checkout</button>
+          </div>
+        </div>
+
+        <div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-orange-800 text-gray-200 h-28 flex items-center justify-center">
+    <div class="container text-center">
+      <p>Copyrights &copy; ELSHAFIE-2024</p>
+    </div>
+  </footer>
+
+
+
+<script src="../js/cart.js"></script>
+</body>
+</html>

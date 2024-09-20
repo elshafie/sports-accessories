@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#444444"
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <title>E-Commerce</title>
+</head>
+<body>
+  <header class="bg-orange-800 flex items-center justify-center h-24 sticky top-0 w-full">
+    <div class="container flex items-center justify-between py-4 px-20">
+      <div class="logo">
+        <a href="/">
+          <h2 class="font-extrabold text-3xl text-gray-300">SPORTS</h2>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="min-h-[77dvh] flex items-center justify-center bg-[url('../assets/login.jpg')] bg-cover bg-top">
+    <div
+    class="container h-[50dvh] flex items-center justify-center p-4">
+      <div
+      class="form w-full lg:w-2/5 bg-gray-500 bg-opacity-90 p-4 flex flex-col items-center rounded-3xl text-white">
+        <h1
+        class="font-bold text-4xl">Login</h1>
+        <form
+        class="w-full p-4 flex flex-col items-center gap-12"
+        id="login-form"
+        >
+
+          <div class="form-control w-full">
+            <label for="email">Email:</label>
+            <input class="w-full p-2 rounded border  bg-transparent border-gray-400 focus:outline-none" type="email" name="email" id="email">
+          </div>
+
+          <div class="form-control w-full">
+            <label for="email">Password:</label>
+            <input class="w-full p-2 rounded border  bg-transparent border-gray-400 focus:outline-none" type="password" name="pass" id="pass">
+          </div>
+
+          <div class="form-control bg-cyan-500 py-3 px-6 rounded cursor-pointer">
+            <input class="cursor-pointer" type="submit" value="Login">
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+ <footer class="bg-orange-800 text-gray-200 h-28 flex items-center justify-center">
+    <div class="container text-center">
+      <p>Copyrights &copy; ELSHAFIE-2024</p>
+    </div>
+  </footer>
+  </footer>
+
+
+  <script src="../js/auth-login.js"></script>
+</body>
+</html>
