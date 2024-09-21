@@ -34,27 +34,33 @@ document.addEventListener("DOMContentLoaded", () => {
         cart?.map(item => {
           total = total + (item.quantity * item.price)
           const cartItem = document.createElement('div');
-          cartItem.classList.add('flex', 'justify-between', 'items-center', 'py-2', "cart-item", "w-full", "border", "rounded-xl", "px-6"
+          cartItem.classList.add('flex', 'justify-between', 'items-center', 'py-2', "cart-item", "w-full", "border", "rounded-xl", "px-2", "lg:px-6"
           );
           cartItem.innerHTML = `
             <div class="cart-item-image flex items-center justify-center flex-[1]">
-              <img class="w-16 h-16 rounded-e-full" src="${item.images}" alt="">
+              <img class="w-16 h-16 rounded-e-full" src="${
+                item.images
+              }" alt="">
           </div>
 
           <div class="flex-[3]">
-            <h3 class="text-3xl">${item.title}</h3>
+            <h3 class="text-lg lg:text-3xl">${item.title}</h3>
           </div>
 
-          <div class="quantity flex-[1] flex justify-between items-center gap-6 text-3xl font-bold">
-            <button class="quantity-minus p-4" onclick="minusQuantity(${item.id})">-</button>
+          <div class="quantity flex-[1] flex justify-between items-center gap-2 lg:gap-6 text-lg lg:text-3xl font-bold">
+            <button class="quantity-minus p-2 lg:p-4" onclick="minusQuantity(${
+              item.id
+            })">-</button>
 
             <p>${item.quantity}</p>
 
-            <button class="quantity-plus p-4" onclick="plusQuantity(${item.id})">+</button>
+            <button class="quantity-plus p-2 lg:p-4" onclick="plusQuantity(${
+              item.id
+            })">+</button>
           </div>
 
-          <div class="price flex-[1] flex items-center justify-center text-2xl text-gray-700">
-            ${item.quantity * item.price}$
+          <div class="price flex-[1] flex items-center justify-center text-xl lg:text-3xl text-gray-700">
+            ${(item.quantity * item.price).toFixed(2)}$
           </div>
           `;
 
@@ -126,22 +132,26 @@ const updateCart = () => {
         .map((item) => {
           total += item.price * item.quantity;
           return `
-            <div class="cart-item flex justify-between items-center py-2 border rounded-xl px-4">
+            <div class="cart-item flex justify-between items-center py-2 border rounded-xl px-2 lg:px-6">
             <div class="cart-item-image flex items-center justify-center flex-[1]">
             <img class="w-16 h-16 rounded-e-full" src="${item.images}"
             alt="">
             </div>
             <div class="cart-item-info flex-[3]">
-            <h3 class="text-3xl">${item.title}</h3>
+            <h3 class="text-lg lg:text-3xl">${item.title}</h3>
             </div>
-            <div class="quantity flex-[1] flex justify-between items-center gap-6 text-3xl font-bold">
-            <button class="quantity-minus p-4" onclick="minusQuantity(${item.id})">
+            <div class="quantity flex-[1] flex justify-between items-center gap-2 lg:gap-6 text-lg lg:text-3xl font-bold">
+            <button class="quantity-minus p-2 lg:p-4" onclick="minusQuantity(${
+              item.id
+            })">
             -</button>
             <p>${item.quantity}</p>
-            <button class="quantity-plus p-4" onclick="plusQuantity(${item.id})">
+            <button class="quantity-plus  p-2 lg:p-4" onclick="plusQuantity(${
+              item.id
+            })">
             +</button>
             </div>
-            <div class="price flex-[1] flex items-center justify-center text-2xl text-gray-700">
+            <div class="price flex-[1] flex items-center justify-center text-xl lg:text-3xl text-gray-700">
             ${(item.quantity * item.price).toFixed(2)}$
             </div>
             </div>
